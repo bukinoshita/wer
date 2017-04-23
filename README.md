@@ -1,4 +1,4 @@
-# wer
+# wer [![Build Status](https://travis-ci.org/bukinoshita/wer.svg?branch=master)](https://travis-ci.org/bukinoshita/wer)
 
 > Get your geolocation information :round_pushpin:
 
