@@ -16,6 +16,13 @@
   "scripts": {
     "test": "node_modules/.bin/xo && node_modules/.bin/ava -v"
   },
+  "keywords": [
+    "wer",
+    "where",
+    "location",
+    "geolocation",
+    "ip"
+  ],
   "xo": {
     "space": true,
     "semicolon": false,
