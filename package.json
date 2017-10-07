@@ -1,6 +1,6 @@
 {
   "name": "wer",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Get your geolocation information",
   "main": "index.js",
   "repository": "git@github.com:bukinoshita/wer.git",
@@ -17,8 +17,16 @@
   "scripts": {
     "test": "xo && ava"
   },
-  "keywords": ["wer", "where", "location", "geolocation", "ip"],
+  "keywords": [
+    "wer",
+    "where",
+    "location",
+    "geolocation",
+    "ip"
+  ],
   "xo": {
-    "extends": ["prettier"]
+    "extends": [
+      "prettier"
+    ]
   }
 }
