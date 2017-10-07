@@ -2,10 +2,14 @@
 
 const got = require('got')
 
-const wer = () => (
-  got('https://freegeoip.net/json/')
-    .then(res => JSON.parse(res.body))
-    .catch(err => err)
-)
+module.exports = () =>
+  got('https://ipinfo.io/json')
+    .then(res => {
+      const json = JSON.parse(res.body)
+      const lat = json.loc.split(',')[0]
+      const long = json.loc.split(',')[1]
+      const data = Object.assign({}, json, { lat, long })
 
-module.exports = wer
+      return data
+    })
+    .catch(err => err)

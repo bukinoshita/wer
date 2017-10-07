@@ -11,24 +11,14 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
+    "eslint-config-prettier": "^2.6.0",
     "xo": "^0.18.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/xo && node_modules/.bin/ava -v"
+    "test": "xo && ava"
   },
-  "keywords": [
-    "wer",
-    "where",
-    "location",
-    "geolocation",
-    "ip"
-  ],
+  "keywords": ["wer", "where", "location", "geolocation", "ip"],
   "xo": {
-    "space": true,
-    "semicolon": false,
-    "esnext": true,
-    "rules": {
-      "camelcase": 0
-    }
+    "extends": ["prettier"]
   }
 }
