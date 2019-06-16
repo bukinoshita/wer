@@ -3,20 +3,12 @@
   "version": "1.0.0",
   "description": "Get your geolocation information",
   "main": "index.js",
-  "repository": "git@github.com:bukinoshita/wer.git",
+  "repository": "bukinoshita/wer",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "got": "^6.7.1"
-  },
-  "devDependencies": {
-    "ava": "^0.19.1",
-    "eslint-config-prettier": "^2.6.0",
-    "xo": "^0.18.1"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "wer",
     "where",
@@ -24,9 +16,36 @@
     "geolocation",
     "ip"
   ],
+  "scripts": {
+    "test": "ava",
+    "lint": "xo"
+  },
+  "dependencies": {
+    "got": "^9.6.0"
+  },
+  "devDependencies": {
+    "ava": "^2.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "xo": "^0.24.0"
+  },
   "xo": {
     "extends": [
       "prettier"
     ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --semi false --single-quote --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
