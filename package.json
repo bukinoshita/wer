@@ -24,7 +24,7 @@
     "got": "^10.0.0"
   },
   "devDependencies": {
-    "ava": "2.4.0",
+    "ava": "3.15.0",
     "eslint-config-prettier": "6.9.0",
     "husky": "4.2.1",
     "lint-staged": "10.0.2",
